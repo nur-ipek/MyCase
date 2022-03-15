@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MyCase.API.Mapping;
 using MyCase.Core.Repositories;
 using MyCase.Core.Services;
 using MyCase.Data.Context;
@@ -32,7 +34,15 @@ namespace MyCase.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MapProfile());
+            });
 
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+            // iliþkisel verilerin serialize edilmesinde döngüsel durumun gerçekleþtirilememesi için eklenen bir satýr..
             services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
@@ -49,6 +59,7 @@ namespace MyCase.API
             });
             services.AddTransient<ITvShowRepository, TvShowRepository>();
             services.AddTransient<ITvShowService, TvShowService>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -61,6 +61,7 @@ namespace MyCase.Data.Context
             modelBuilder.Entity<Episode>().HasData(new Episode
             {
                 Id = Guid.Parse("3e4576c7-09df-4646-9c96-cdb210bb0741"),
+                Rank= "1.Bölüm",
                 Name = "Kalbimizi Kıracaklar",
                 Summary = "Yakın arkadaşlar Dicle,Güneş vs. için yenibir gün.. ",
                 SeasonId = Guid.Parse("88f9b49e-f21e-42af-93ed-0e4746b6eb3f")
@@ -68,6 +69,7 @@ namespace MyCase.Data.Context
             new Episode
             {
                 Id = Guid.Parse("6c91df7f-363a-46ac-9364-543a2e00e743"),
+                Rank = "1.Bölüm",
                 Name = "Tehlikeli Sular",
                 Summary = "Güneşin işteki ilk günü.. ",
                 SeasonId = Guid.Parse("1b750d2a-9594-4a34-be51-c1a5ced11d56")

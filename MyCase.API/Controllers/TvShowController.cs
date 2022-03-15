@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using MyCase.API.DTOs;
 using MyCase.Core.Models;
 using MyCase.Core.Services;
 using MyCase.Service.Services;
@@ -9,21 +11,27 @@ using System.Threading.Tasks;
 
 namespace MyCase.API.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("api/v1")]
     [ApiController]
     public class TvShowController : Controller
     {
         private readonly ITvShowService _tvShowService;
-        public TvShowController(ITvShowService tvShowService)
+        private readonly IMapper _mapper;
+        public TvShowController(ITvShowService tvShowService,IMapper mapper)
         {
             _tvShowService = tvShowService;
+            _mapper = mapper;
         }
 
+        //REST kaynaklarla çalışmak için GET, DELETE, POST, PUT gibi HTTP yöntemleri kullanır.
         [HttpGet]
-        public IEnumerable<TvShow> GetAll()
+        [Route("TvShows")]
+        public IActionResult GetAll()
         {
-           var a= _tvShowService.GetTvShows();
-            return a.ToList();
+           var tvShowList= _tvShowService.GetTvShows().ToList();
+
+            return Ok(_mapper.Map<IEnumerable<TvShowDto>>(tvShowList)); //200 durum kodu
+
         }
     }
 }
