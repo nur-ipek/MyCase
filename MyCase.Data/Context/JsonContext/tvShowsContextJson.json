@@ -1,0 +1,51 @@
+[
+  {
+    "id": "1282d141-674d-43b4-89cf-e87c814f0021",
+    "name": "Hayaller ve Hayatlar",
+    "seasons": [
+      {
+        "id": "88f9b49e-f21e-42af-93ed-0e4746b6eb3f",
+        "name": "Sezon 1",
+        "summary": "Hayallerinin peşinde koşarken hayata yakalananların hikayesini anlatan...",
+        "tvShowId": "1282d141-674d-43b4-89cf-e87c814f0021",
+        "episodes": [
+          {
+            "id": "3e4576c7-09df-4646-9c96-cdb210bb0741",
+            "rank": "1.Bölüm",
+            "name": "Kalbimizi Kıracaklar",
+            "summary": "Yakın arkadaşlar Dicle,Güneş vs. için yenibir gün.. ",
+            "seasonId": "88f9b49e-f21e-42af-93ed-0e4746b6eb3f"
+          }
+        ]
+      },
+      {
+        "id": "1b750d2a-9594-4a34-be51-c1a5ced11d56",
+        "name": "Sezon 2",
+        "summary": "Hayallerinin peşinde koşarken hayata yakalananların hikayesini anlatan v2...",
+        "tvShowId": "1282d141-674d-43b4-89cf-e87c814f0021",
+        "episodes": [
+          {
+            "id": "6c91df7f-363a-46ac-9364-543a2e00e743",
+            "rank": "1.Bölüm",
+            "name": "Tehlikeli Sular",
+            "summary": "Güneşin işteki ilk günü.. ",
+            "seasonId": "1b750d2a-9594-4a34-be51-c1a5ced11d56"
+          },
+          {
+            "id": "badf0813-fe12-4070-bd25-f0c3f739d888",
+            "rank": "2.Bölüm",
+            "name": "Şüphenin Fısıltısı",
+            "summary": "Setenay,Emre'nin ilgisizliğine rağmen hayal ettiği gibi bir..",
+            "seasonId": "1b750d2a-9594-4a34-be51-c1a5ced11d56"
+          }
+        ]
+      }
+    ],
+    "image": {
+      "id": "4c1f66c7-69b0-439b-b34d-8ebfddf5942c",
+      "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/0/1.jpg",
+      "original": "http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg"
+    },
+    "imageId": "4c1f66c7-69b0-439b-b34d-8ebfddf5942c"
+  }
+]

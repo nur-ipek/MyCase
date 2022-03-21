@@ -13,6 +13,7 @@ using MyCase.API.Mapping;
 using MyCase.Core.Repositories;
 using MyCase.Core.Services;
 using MyCase.Data.Context;
+using MyCase.Data.JsonRepository;
 using MyCase.Data.Repositories;
 using MyCase.Service.Services;
 using System;
@@ -57,7 +58,7 @@ namespace MyCase.API
                     o => o.MigrationsAssembly("MyCase.Data"));
 
             });
-            services.AddTransient<ITvShowRepository, TvShowRepository>();
+            services.AddTransient<ITvShowRepository, TvShowRepositoryJson>();
             services.AddTransient<ITvShowService, TvShowService>();
             
         }
